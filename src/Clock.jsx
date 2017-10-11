@@ -12,7 +12,13 @@ class Clock extends Component {
     }
   }
 
+  getTimeUntil(deadline){
+    const time= Date.parse(deadline) - Date.parse(new Date());
+    console.log(time);
+  }
+
   render() {
+    this.getTimeUntil(this.props.deadline);
    return (
      <div>
        <div className="Clock-days">{this.state.days} days</div>
